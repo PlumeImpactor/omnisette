@@ -8,16 +8,18 @@ default = []
 vendored-botan = ["botan/vendored"]
 
 [dependencies]
+sha2.workspace = true
+rand.workspace = true
+base64.workspace = true
+plist.workspace = true
+thiserror.workspace = true
+
 serde = { version = "1", features = ["derive"] }
 serde_json = { version = "1" }
-base64 = "0.22"
-srp = { version = "0.6.0", path = "./rustcrypto-srp" }
+srp = "0.6.0"
 pbkdf2 = "0.11"
-sha2 = "0.10"
-rand = "0.9"
 rustls = "0.23"
 rustls-pemfile = "2.2"
-plist = "1.7.2"
 hmac = "0.12.1"
 num-bigint = "0.4.3"
 cbc = { version = "0.1.2", features = ["std"] }
@@ -25,9 +27,8 @@ aes = "0.8.2"
 pkcs7 = "0.4.1"
 reqwest = { version = "0.11.14", features = ["blocking", "json", "default-tls"] }
 omnisette = {path = "../omnisette", features = ["remote-anisette-v3"]}
-thiserror = "2"
 tokio = "1"
 botan = "0.12.0"
 
 [dev-dependencies]
-tokio = { version = "1", features = ["rt", "macros"] }
+tokio.workspace = true

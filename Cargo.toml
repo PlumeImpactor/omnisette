@@ -1,7 +1,18 @@
 [workspace]
 members = [
     "omnisette",
-    "icloud-auth",
-    "apple-dev-apis",
-    "apple-codesign-wrapper"
+    "icloud-auth"
 ]
+
+[workspace.dependencies]
+sha2 = "0.10"
+base64 = "0.22"
+rand = "0.9"
+plist = "1.8.0"
+thiserror = "2"
+
+# dev-dependencies
+tokio = { version = "1", features = ["rt", "macros"] }
+
+[patch.crates-io]
+srp = { path="./target/patch/srp-0.6.0" }

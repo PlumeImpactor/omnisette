@@ -8,3 +8,4 @@ ignore_this_test.js
 .idea
 
 anisette_test/
+*.DS_Store
