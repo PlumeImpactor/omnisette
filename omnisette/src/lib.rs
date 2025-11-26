@@ -143,7 +143,7 @@ impl AnisetteHeaders {
     pub fn get_anisette_headers_provider(
         configuration: AnisetteConfiguration,
     ) -> Result<AnisetteHeadersProviderRes, AnisetteError> {
-        #[cfg(target_os = "macos")]
+        #[cfg(target_os = "macos", feature = "aos-kit")]
         if let Ok(prov) = aos_kit::AOSKitAnisetteProvider::new() {
             return Ok(AnisetteHeadersProviderRes::local(Box::new(prov)));
         }
