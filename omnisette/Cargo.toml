@@ -8,7 +8,7 @@ remote-anisette = []
 async = ["dep:async-trait"]
 default = ["remote-anisette", "dep:remove-async-await"]
 remote-anisette-v3 = ["async", "dep:serde", "dep:serde_json", "dep:tokio-tungstenite", "dep:futures-util", "dep:chrono"]
-aos-kit = ["remote-anisette-v3"]
+aos-kit = []
 
 [dependencies]
 sha2.workspace = true
