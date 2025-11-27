@@ -34,7 +34,7 @@ impl<'lt> AnisetteHeadersProvider for AOSKitAnisetteProvider<'lt> {
         let mut headers_map = HashMap::new();
 
         let headers: *const NSObject = unsafe {
-            msg_send![self.aos_utilities, retrieveOTPHeadersForDSID: NSString::from_str("-2")]
+            msg_send![self.aos_utilities, retrieveOTPHeadersForDSID: NSString::from_str("-1")]
         };
 
         let otp: *const NSString =
